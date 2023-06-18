@@ -1,0 +1,65 @@
+.stepper {
+  width: 100%;
+  height: 16px;
+  display: flex;
+  position: relative;
+  background-color: #ebebf6;
+
+  
+  &[data-width='33']::before {
+    width: 45%;
+  }
+
+  &[data-width='66']::before {
+    width: 97%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    background-color: #ef5da8;
+    height: 16px;
+  }
+
+  &::after {
+    content: attr(data-step);
+    position: absolute;
+    right: 0px;
+    top: -28px;
+  }
+
+  .step {
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    background-color: white;
+    border-radius: 50%;
+    left: -8px;
+    top: -8px;
+    border: 1px solid #efe2e2;
+
+    &.active {
+      background-color: #dadaf2;
+
+      &::after {
+        content: "";
+        width: 19px;
+        height: 19px;
+        background-color: #ef5da8;
+        position: absolute;
+        border-radius: 50%;
+        left: 14%;
+        top: 13%;
+      }
+    }
+
+    &:nth-child(2) {
+      left: 44%;
+    }
+
+    &:last-child {
+      left: 96%;
+    }
+  }
+}

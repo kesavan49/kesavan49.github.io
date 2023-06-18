@@ -1,0 +1,54 @@
+@import "../../../../styles/responsive";
+
+.signinForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    width: 60%;
+    margin-top: 5%;
+  }
+
+  .tooltext {
+    text-align: right;
+    padding: 1rem 0;
+    cursor: pointer;
+    font-family: "Poppins";
+    font-size: 13px;
+  }
+
+  .text {
+    font-family: "Poppins";
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 2rem;
+  }
+
+  .signinBtn{
+    margin-top: 7%;
+    margin-bottom: 7%;
+
+    & div:first-child {
+      background-color: #EBEBF6;
+    }
+    & div:nth-child(2) { 
+      border-radius: 3px;
+    }
+
+    & div:last-child {
+      border-left-color: #FFB82E;
+      margin-left: -1px;
+    }
+  }
+
+  @include mobile {
+      .form {
+        width: 90%;
+      }
+  }
+
+}

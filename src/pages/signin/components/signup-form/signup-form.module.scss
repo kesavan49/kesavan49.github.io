@@ -1,0 +1,52 @@
+@import "../../../../styles/responsive";
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+
+  .form {
+    width: 60%;
+    margin-top: 5%;
+  }
+
+  .info {
+    align-self: center;
+    margin-left: auto;
+    font-size: 0.8rem;
+    color: #595555;
+  }
+
+  .helperTxt {
+    color: #A09B9B;
+  }
+
+
+  .signinBtn{
+    margin-top: 7%;
+    margin-bottom: 7%;
+
+    & div:first-child {
+      background-color: #EBEBF6;
+    }
+    & div:nth-child(2) { 
+      border-radius: 3px;
+    }
+
+    & div:last-child {
+      border-left-color: #FFB82E;
+      margin-left: -1px;
+    }
+  }
+  
+
+  @include mobile {
+      .form {
+        width: 90%;
+      }
+  }
+
+}

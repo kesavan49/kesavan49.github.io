@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+@import "../../styles/colors";
+@import "../../styles/responsive";
+
+.splitContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  scroll-snap-align: center;
+
+  .left, .right {
+    height: 100%;
+    justify-content: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 5%;
+  }
+
+  .right {
+    align-items: center;
+  }
+
+  @include mobile {
+    flex-direction: column;
+
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  @include mobileLandscape {
+    flex-direction: column;
+    height: auto;
+  }
+
+ @include smallDevice {
+    flex-direction: column;
+    height: auto;
+  }
+
+  // @include tabLandscape{
+  //   flex-direction: column;
+  //   height: auto;
+  // }
+
+
+}
+

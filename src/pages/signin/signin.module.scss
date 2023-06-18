@@ -1,0 +1,108 @@
+@import "../../styles/responsive";
+
+.signIn {
+  background-color: white;
+
+  & > div:first-child {
+    padding: 0;
+  }
+
+  & > div:last-child {
+    background-color: #f4f4ff;
+    border-top-left-radius: 2rem;
+    border-bottom-left-radius: 2rem;
+    width: 50%;
+    padding: 0;
+  }
+
+  .slider {
+    width: 86%;
+    margin: 5% 1%;
+
+    .slide {
+      white-space: normal;
+      line-height: 3.5rem;
+
+      .description {
+        font-family: "Playfair Display", serif;
+        color: #211149;
+      }
+      .author {
+        text-align: right;
+        font-family: "Poppins";
+        color: #706c6c;
+        font-size: 0.9rem;
+        margin-bottom: 3%;
+      }
+    }
+  }
+
+  .image {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+
+    img {
+      height: 49vh;
+      margin-left: auto;
+    }
+  }
+
+  .signinContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .offer {
+    margin: 3%;
+    line-height: 2rem;
+    background-color: #ffd583;
+    padding: 2%;
+    border-radius: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 87%;
+
+    .icon {
+      background-color: white;
+      padding: 0.5rem;
+      border-radius: 50%;
+    }
+
+    ul {
+      margin-left: 2.5rem;
+    }
+  }
+
+
+  @include mobile {
+    
+    h2 {
+      text-align: center;
+      padding: 5%;
+    }
+
+    & > div:last-child { 
+      display: none;
+    }
+  }
+
+}
+
+.signUp {
+  & > div:last-child {
+    background-color: #5D5FEF;
+  }
+  .navSign {
+    color: white;
+    margin-left: auto;
+    padding: 5%;
+    cursor: pointer;
+  }
+
+
+}

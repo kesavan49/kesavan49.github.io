@@ -1,0 +1,73 @@
+@import "../../../../styles/responsive";
+
+.playContainer {
+  position: relative;
+
+  .action {
+    position: absolute;
+    bottom: 2.9%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: capitalize;
+    width: 100%;
+    line-height: 2rem;
+    cursor: pointer;
+  }
+
+  .playBtn {
+    width: 94px;
+    height: 94px;
+    background-color: #ef5da8;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 5%;
+
+    .playIcon {
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+      border-left: 25px solid white;
+      margin-left: 7px;
+    }
+  }
+
+  .secImage {
+    width: 100%;
+    height: 100%;
+  }
+
+  .helpText {
+    color: #5656bd;
+    font-size: 0.9rem;
+  }
+
+  @include tablet {
+    text-align: left;
+    font-size: 1rem;
+
+    .action {
+      line-height: 1.5rem;
+      bottom: 20%;
+      
+    }
+
+    .playBtn {
+      width: 56px;
+      height: 56px;
+    }
+    .helpText {
+      font-size: 0.7rem;
+    }
+  }
+
+  @include smallDevice {
+    .action {
+      bottom: 5%;
+    }
+  }
+}
